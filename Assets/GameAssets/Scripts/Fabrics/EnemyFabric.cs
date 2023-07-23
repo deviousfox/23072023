@@ -1,6 +1,5 @@
 using GameAssets.Scripts.Enemies;
 using GameAssets.Scripts.Main;
-using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,7 +9,7 @@ namespace GameAssets.Scripts.Fabrics
     {
         public override Enemy GetObject<TFabricConfig>(TFabricConfig config,Vector3 pos)
         {
-            var enemy = Instantiate(prefab, pos, quaternion.identity);
+            var enemy = Instantiate(prefab, pos, Quaternion.identity);
             enemy.Configurate(config);
             return enemy;
         }

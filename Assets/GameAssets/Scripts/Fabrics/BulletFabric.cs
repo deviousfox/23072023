@@ -1,6 +1,5 @@
 using GameAssets.Scripts.Main;
 using GameAssets.Scripts.Player;
-using Unity.Mathematics;
 using UnityEngine;
 
 namespace GameAssets.Scripts.Fabrics
@@ -9,7 +8,7 @@ namespace GameAssets.Scripts.Fabrics
     {
         public override Bullet GetObject<TFabricConfig>(TFabricConfig config, Vector3 pos)
         {
-            var bullet = Instantiate(prefab, pos, quaternion.identity);
+            var bullet = Instantiate(prefab, pos, Quaternion.identity);
             bullet.Configurate(config);
             return bullet;
         }
